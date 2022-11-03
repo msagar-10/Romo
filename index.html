@@ -21,8 +21,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate.min.css" />
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="css/aos.min.css" />
     <!-- Ui Icons -->
     <link rel="stylesheet" href="css/icofont.css" />
 
@@ -44,11 +42,57 @@
       </p>
     <![endif]-->
 
+    <!-- preloader -->
+    <div id="preloader">
+      <div id="loading-center">
+        <div class="loader">
+          <div class="loader-outter"></div>
+          <div class="loader-inner"></div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader-end -->
+
+    <!-- Mobile Menu Modal -->
+    <div class="modal offcanvas-modal fade" id="offcanvas-modal">
+      <div class="modal-dialog offcanvas-dialog">
+        <div class="modal-content">
+          <div class="modal-header offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icofont-close-line"></i>
+            </button>
+          </div>
+          <!-- offcanvas-logo-start -->
+          <!-- <div class="offcanvas-logo">
+            <img src="img/logo.svg" alt="#" />
+          </div> -->
+          <!-- offcanvas-logo-end -->
+          <!-- offcanvas-menu start -->
+          <nav id="offcanvas-menu" class="offcanvas-menu">
+            <ul class="list-none">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="offcanvas-btn">
+              <a href="#" class="theme-btn">Sign up</a>
+            </div>
+          </nav>
+          <!-- offcanvas-menu end -->
+        </div>
+      </div>
+    </div>
+    <!-- End Mobile Menu Modal -->
+
     <!-- Header Area -->
     <header id="active-sticky" class="header-area">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 offset-lg-6 col-md-6 col-12">
+          <div class="col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-12">
             <div class="header-menu">
               <ul class="header-menu-list">
                 <li class="home-list"><a href="index.html">Home</a></li>
@@ -58,6 +102,18 @@
                 <a href="#" class="theme-btn">Sign up</a>
               </div>
             </div>
+          </div>
+          <div class="col-auto">
+            <button
+              type="button"
+              class="offcanvas-toggler"
+              data-bs-toggle="modal"
+              data-bs-target="#offcanvas-modal"
+            >
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
           </div>
         </div>
       </div>
@@ -73,7 +129,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-12">
+          <div class="col-lg-6 col-12">
             <div class="hero-content">
               <h1 class="hero-content-title">
                 <span>Unforgettable</span><br />
@@ -99,7 +155,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-12">
+          <div class="col-lg-6 col-12 pd-none-reponsive">
             <div class="hero-img-right">
               <div class="hero-img">
                 <img src="img/hero-area-img/hero-img.svg" alt="#" />
@@ -123,7 +179,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 offset-lg-2 col-md-8 offset-lg-2 col-12">
+          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12">
             <div class="call-action-content">
               <h1 class="call-action-cont-title">
                 <span class="border-line line-1"
@@ -212,14 +268,11 @@
 
     <!-- Jquery JS -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery-migrate.js"></script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Modernizer JS -->
     <script src="js/modernizer.min.js"></script>
-    <!-- Aos JS -->
-    <script src="js/aos.min.js"></script>
     <!-- Main JS -->
     <script src="js/active.js"></script>
   </body>
