@@ -1,20 +1,9 @@
 (function ($) {
-  "use strict";
+  ("use strict");
   $(document).on("ready", function () {
-    /*====================================
-			Aos Animate JS
-		======================================*/
-    AOS.init({
-      duration: 1500,
-      disable: !1,
-      offset: 0,
-      once: !0,
-      easing: "ease",
-    });
-
-    /*====================================
-			Header Sticky JS
-		======================================*/
+    /*==============================================
+		Header Sticky JS
+	================================================*/
     var activeSticky = $("#active-sticky"),
       winDow = $(window);
     winDow.on("scroll", function () {
@@ -27,9 +16,9 @@
       }
     });
 
-    /*====================================
-			Mobile Menu
-		======================================*/
+    /*==============================================
+		Mobile Menu
+	================================================*/
     var $offcanvasNav = $("#offcanvas-menu a");
     $offcanvasNav.on("click", function () {
       var link = $(this);
@@ -49,9 +38,9 @@
       }
     });
 
-    /*====================================
-			Scroll To Top JS
-		======================================*/
+    /*==============================================
+		Scroll To Top JS
+	================================================*/
     var lastScrollTop = "";
     var scrollToTopBtn = ".scrollToTop";
 
@@ -87,5 +76,12 @@
       );
       return false;
     });
+  });
+
+  /*==================================================
+		Preloader JS
+	====================================================*/
+  $(window).on("load", function (event) {
+    $("#preloader").delay(800).fadeOut(500);
   });
 })(jQuery);
