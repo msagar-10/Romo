@@ -1220,7 +1220,7 @@ object {
   .header-area {
     background: #fffbf8;
     border-bottom: none;
-    padding: 46px 0px;
+    padding: 46px 0px !important;
   }
 
   .header-menu {
@@ -1231,6 +1231,9 @@ object {
   }
   .hero-shape {
     display: none;
+  }
+  .header-area.is-sticky {
+    padding: 0px;
   }
 }
 
