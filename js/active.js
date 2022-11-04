@@ -4,15 +4,26 @@
     /*==============================================
 		Header Sticky JS
 	================================================*/
-    var activeSticky = $("#active-sticky"),
-      winDow = $(window);
-    winDow.on("scroll", function () {
-      var scroll = $(window).scrollTop(),
-        isSticky = activeSticky;
-      if (scroll < 50) {
-        isSticky.removeClass("is-sticky");
+    // var activeSticky = $("#active-sticky"),
+    //   winDow = $(window);
+    // winDow.on("scroll", function () {
+    //   var scroll = $(window).scrollTop(),
+    //     isSticky = activeSticky;
+    //   if (scroll < 100) {
+    //     isSticky.removeClass("is-sticky");
+    //   } else {
+    //     isSticky.addClass("is-sticky");
+    //   }
+    // });
+
+    $(window).scroll(function () {
+      var sticky = $("#active-sticky"),
+        scroll = $(window).scrollTop();
+
+      if (scroll >= 40) {
+        sticky.addClass("fixed");
       } else {
-        isSticky.addClass("is-sticky");
+        sticky.removeClass("fixed");
       }
     });
 
